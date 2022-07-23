@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="login_hint">Server pin = 1234 \nManager Pin = 4321 \nThese users are already registered to database</string>
+</resources>

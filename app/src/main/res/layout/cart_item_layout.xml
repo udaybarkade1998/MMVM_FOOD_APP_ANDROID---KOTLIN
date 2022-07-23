@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?selectableItemBackground"
+    card_view:cardBackgroundColor="#FFFF"
+    card_view:cardCornerRadius="1dp"
+    card_view:contentPadding="10dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cart_item_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/cart_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="32dp"
+            android:text="Product Name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/cart_item_image"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.114" />
+
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="@+id/cart_item_name"
+            card_view:layout_constraintStart_toStartOf="@+id/cart_item_name"
+            card_view:layout_constraintTop_toBottomOf="@+id/cart_item_name"
+            card_view:layout_constraintVertical_bias="0.2">
+
+            <TextView
+                android:id="@+id/decreaseCount"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:background="@drawable/ic_remove"
+                android:backgroundTint="#00B0FF" />
+
+            <TextView
+                android:id="@+id/itemCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="5dp"
+                android:text="0"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/increaseCount"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:background="@drawable/ic_add"
+                android:backgroundTint="#00B0FF" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cartItem_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="68dp"
+            android:text="100$"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.157"
+            card_view:layout_constraintStart_toEndOf="@+id/cart_item_name"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.459" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
