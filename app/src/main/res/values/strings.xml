@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Instant Food</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="confirm_pay"><![CDATA[Confirm & Pay]]></string>
+    <string name="togo">TOGO</string>
+    <string name="login_hint">Server pin = 1234 \nManager Pin = 4321 \nThese users are already registered to database</string>
+</resources>
