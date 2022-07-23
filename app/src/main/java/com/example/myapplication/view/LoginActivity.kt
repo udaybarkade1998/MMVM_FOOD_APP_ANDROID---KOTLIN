@@ -37,15 +37,19 @@ class LoginActivity : AppCompatActivity() {
 
         btLogin.setOnClickListener(View.OnClickListener {
 
-            loginViewModel.getUserData(etLoginPin.text.toString().toInt())
+            if (etLoginPin.text.toString().toString().isEmpty())
+                etLoginPin.error = "please enter pin"
+            else {
+                loginViewModel.getUserData(etLoginPin.text.toString().toInt())
 
-            loginViewModel.liveUserData!!.observe(this) {
-                if (it == null) {
-                    etLoginPin.error = "Wrong Credentials"
+                loginViewModel.liveUserData!!.observe(this) {
+                    if (it == null) {
+                        etLoginPin.error = "Wrong Credentials"
 
-                } else {
-                    userModel=it
-                    switchToLandingPage()
+                    } else {
+                        userModel = it
+                        switchToLandingPage()
+                    }
                 }
             }
         })

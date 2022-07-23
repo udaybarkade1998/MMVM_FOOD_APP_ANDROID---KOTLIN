@@ -24,7 +24,20 @@ class TransactionAdapter(
         viewHolder.name.text = tranList[i].name
         viewHolder.price.text = "${tranList[i].cost}$"
         viewHolder.time.text = tranList[i].time
-        viewHolder.id.text = tranList[i].id.toString()
+
+
+        var orderId=tranList[i].id
+
+        var count = orderId.toString().length
+
+        var orderidText=when(count){
+            1->"000$orderId"
+            2->"00$orderId"
+            3->"0$orderId"
+            else ->"$orderId"
+        }
+
+        viewHolder.id.text = orderidText
 
 
     }
