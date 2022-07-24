@@ -64,6 +64,7 @@ class FragmentCart : Fragment() {
         tvTotal = view.findViewById(R.id.tvTotalVal)
         tvTax = view.findViewById(R.id.tvTaxVal)
         tvSubTotal = view.findViewById(R.id.tvSubTotalVal)
+        tvTax.text="8.25%"
 
         val recyclerView: RecyclerView = view.findViewById(R.id.rvCartItems)
 

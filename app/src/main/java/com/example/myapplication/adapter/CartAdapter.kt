@@ -82,7 +82,7 @@ class CartAdapter(private val keyList :List<Int>) : RecyclerView.Adapter<CartAda
 
         FragmentCart.total=FragmentCart.subtotal+FragmentCart.subtotal/100*FragmentCart.tax
 
-        FragmentCart.tvTotal!!.text=FragmentCart.total.toString()
+        FragmentCart.tvTotal!!.text="${FragmentCart.total}$"
     }
 
 
