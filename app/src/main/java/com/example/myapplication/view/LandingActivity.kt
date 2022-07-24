@@ -70,12 +70,15 @@ class LandingActivity : AppCompatActivity() {
                 R.id.menu_menus -> replaceFragment(FragmentMenu(), "Menu")
                 R.id.menu_transaction -> replaceFragment(FragmentTransaction(), "Transactions")
                 R.id.menu_cart -> replaceFragment(FragmentCart(), "Cart")
-                R.id.menu_logout -> startActivity(
-                    Intent(
-                        this@LandingActivity,
-                        LoginActivity::class.java
+                R.id.menu_logout -> {
+                    LandingActivity.cartItem.clear()
+                    startActivity(
+                        Intent(
+                            this@LandingActivity,
+                            LoginActivity::class.java
+                        )
                     )
-                )
+                }
             }
             true
         }
